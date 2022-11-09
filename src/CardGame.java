@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class CardGame {
-    CardGame(){
+    CardGame() {
     }
     public static void main(String[] args){
         // TEST CODE TO CHECK PACK IMPORTING WORKS

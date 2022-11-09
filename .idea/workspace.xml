@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0501ab6-d31b-4115-a6ea-31bd38120491" name="Changes" comment="skeleton of files complete">
+    <list default="true" id="f0501ab6-d31b-4115-a6ea-31bd38120491" name="Changes" comment="packClass can now import a packfile (*.txt)">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardDeck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+    </list>
+    <list id="d2dae022-8230-459b-abd4-d84cdac59499" name="Changes by sammy" comment="">
+      <change beforePath="$PROJECT_DIR$/src/CardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardDeck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +31,44 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/Player.java">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="4" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="1" end1="1" start2="5" end2="6" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="13" end1="14" start2="18" end2="23" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="16" end1="18" start2="25" end2="47" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="21" end1="22" start2="50" end2="54" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="24" end1="25" start2="56" end2="72" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="28" end1="28" start2="75" end2="86" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="30" end1="32" start2="88" end2="100" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/CardGame.java">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="2" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="1" end1="1" start2="3" end2="5" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="3" end1="4" start2="7" end2="8" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="5" end1="6" start2="9" end2="11" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="7" end1="7" start2="12" end2="13" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="11" end1="12" start2="17" end2="35" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="13" end1="13" start2="36" end2="59" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="14" end1="14" start2="60" end2="62" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/CardDeck.java">
+      <ranges>
+        <range start1="1" end1="1" start2="1" end2="4" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="2" end1="3" start2="5" end2="7" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="5" end1="5" start2="9" end2="10" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="6" end1="7" start2="11" end2="12" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="11" end1="13" start2="16" end2="28" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="14" end1="14" start2="29" end2="30" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="16" end1="17" start2="32" end2="35" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="22" end1="22" start2="40" end2="62" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -37,6 +82,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "node.js.detected.package.eslint": "true",
@@ -68,7 +114,8 @@
       <option name="presentableId" value="Default" />
       <updated>1667829994869</updated>
       <workItem from="1667829998920" duration="2661000" />
-      <workItem from="1667903945733" duration="2545000" />
+      <workItem from="1667903945733" duration="2595000" />
+      <workItem from="1668000789870" duration="10441000" />
     </task>
     <task id="LOCAL-00001" summary="skeleton of files complete">
       <created>1667833587242</created>
@@ -77,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667833587242</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="packClass can now import a packfile (*.txt)">
+      <created>1667906543347</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667906543347</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +150,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="skeleton of files complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="skeleton of files complete" />
+    <MESSAGE value="packClass can now import a packfile (*.txt)" />
+    <option name="LAST_COMMIT_MESSAGE" value="packClass can now import a packfile (*.txt)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

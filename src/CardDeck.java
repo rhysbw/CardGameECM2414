@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 
-public class Deck extends Thread {
+public class CardDeck extends Thread {
+
     private ArrayList<Card> cards;
     private final int deckNum;
+    private final int limit = 4;
 
-    Deck(int deckNum) {
+    CardDeck(int deckNum) {
         this.deckNum = deckNum;
         this.cards = new ArrayList<>();
     }

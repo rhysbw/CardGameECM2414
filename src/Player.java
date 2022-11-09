@@ -11,25 +11,88 @@ public class Player extends Thread {
         this.hand = new ArrayList<>();
     }
 
-    private void drawCard() {
+    public void drawCard(CardDeck deck) {
+        Card elem = deck.getTopCard();
+        System.out.println("Player " + this.playerNum + " draws card " + elem.getCardValue() + " from deck " + deck.getDeckNum());
+        this.hand.add(elem);
+        writeToOutputFile("Player " + this.playerNum + " draws card " + elem.getCardValue() + " from deck " + deck.getDeckNum());
     }
 
-    private Card discardCard() {
-        return null;
+    private void discardCard(CardDeck deck) {
+        // check prefered card
+        // random choose not preferd card
+
+        int int_random = 0;
+
+        for (;;) {
+
+            System.out.println("Preferred Card: " + this.preferredCard);
+            int_random = new Random().nextInt(3);
+            System.out.println("random card: " + this.hand.get(int_random).getCardValue());
+            if ( this.hand.get(int_random).getCardValue() !=this.preferredCard) {
+                break;
+            }
+        }
+
+
+        deck.putBottom(this.hand.get(int_random));
+        writeToOutputFile("Player " + this.playerNum + " discards card " + this.hand.get(int_random).getCardValue() + " to deck" + deck.getDeckNum());
+        System.out.println("Player " + this.playerNum + " discards card " + this.hand.get(int_random).getCardValue() + " to deck " + deck.getDeckNum());
+        this.hand.remove(int_random);
+
     }
 
     private boolean checkWin() {
-        return false;
+        return this.hand.get(0).getCardValue() == this.hand.get(1).getCardValue() &&
+                this.hand.get(0).getCardValue() == this.hand.get(2).getCardValue() &&
+                this.hand.get(0).getCardValue() == this.hand.get(3).getCardValue();
+
     }
 
-    private void takeTurn() {
+    public void takeTurn(ArrayList<CardDeck> decks) {
+        // discard random card to deck +1 - need to loop back on self
+        // pick up new card from deck same num
+        // check if winning
+        // [deck1, deck2, deck3, deck4]
+        System.out.println("Player " + this.playerNum + " is taking a turn");
+        if (playerNum == decks.size()) {
+            discardCard(decks.get(0));
+        } else {
+            System.out.println("Take turn else running");
+            discardCard(decks.get(this.playerNum));
+        }
+
+        drawCard(decks.get(this.playerNum - 1));
+        checkWin();
+
     }
 
     private void makeOutputFile() {
+        try {
+            File deckFile = new File("deck" + this.playerNum + "_output.txt");
+            if (deckFile.createNewFile()) {
+                System.out.println("File created: " + deckFile.getName());
+            } else {
+                System.out.println("File already exists");
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred in making a player file");
+            e.printStackTrace();
+        }
     }
 
-    private void writeToOutputFile() {
+    private void writeToOutputFile(String output) {
+        try {
+            BufferedWriter playerWriter = new BufferedWriter(new FileWriter("player" + this.playerNum + "_output.txt", true));
+            playerWriter.write(output);
+            playerWriter.newLine();
+            playerWriter.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred in writing to a player file");
+            e.printStackTrace();
+        }
     }
+
 
     public int getPreferredCard() {
         return preferredCard;
