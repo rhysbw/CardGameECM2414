@@ -41,4 +41,38 @@ public class Pack {
         return filename;
     }
 
+    public boolean verified(){
+        ArrayList<Integer> packData = new ArrayList<>();
+        try {
+            File packFile = new File(this.filename);
+            Scanner myReader = new Scanner(packFile);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                try{
+                    if (Integer.parseInt(data) >= 0){
+                        packData.add(Integer.parseInt(data));
+                    } else {
+                        System.out.println("One or more cards have a non-positive value");
+                        return false;
+                    }
+                } catch (NumberFormatException e){
+                    System.out.println("One or more cards do not have a accepted value");
+                    return false;
+                }
+
+
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+            return false; // invalid file name need new pack file
+        }
+        if (packData.size() == this.numberOfPlayers * 8){
+            return true;
+        }
+        System.out.println("Pack size invalid");
+        return false;
+
+    }
+
+
 }

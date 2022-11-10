@@ -69,11 +69,13 @@ public class Player extends Thread {
 
     private void makeOutputFile() {
         try {
-            File deckFile = new File("deck" + this.playerNum + "_output.txt");
-            if (deckFile.createNewFile()) {
-                System.out.println("File created: " + deckFile.getName());
+            File playerFile = new File("player" + this.playerNum + "_output.txt");
+            if (playerFile.createNewFile()) {
+                System.out.println("File created: " + playerFile.getName());
             } else {
-                System.out.println("File already exists");
+                // delete all data
+                playerFile.delete();
+                makeOutputFile();
             }
         } catch (IOException e) {
             System.out.println("An error occurred in making a player file");

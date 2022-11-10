@@ -4,16 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0501ab6-d31b-4115-a6ea-31bd38120491" name="Changes" comment="packClass can now import a packfile (*.txt)">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="f0501ab6-d31b-4115-a6ea-31bd38120491" name="Changes" comment="all functions of Player.java, CardDeck.java, and Card.Java all work and players can 'take a turn' shuch that they can draw and discard a card to the right decks">
+      <change afterPath="$PROJECT_DIR$/src/CardDeckTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CardGameTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CardTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PackTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PlayerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CardGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CardGame.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardDeck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
     <list id="d2dae022-8230-459b-abd4-d84cdac59499" name="Changes by sammy" comment="">
+      <change beforePath="$PROJECT_DIR$/src/CardDeck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardDeck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardDeck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +31,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -32,40 +40,42 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/Pack.java">
+      <ranges>
+        <range start1="13" end1="14" start2="13" end2="13" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="16" end1="17" start2="15" end2="16" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="19" end1="20" start2="18" end2="19" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="42" end1="42" start2="41" end2="75" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+      </ranges>
+    </file>
     <file path="$PROJECT_DIR$/src/Player.java">
       <ranges>
         <range start1="0" end1="0" start2="0" end2="4" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
         <range start1="1" end1="1" start2="5" end2="6" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
-        <range start1="13" end1="14" start2="18" end2="23" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
-        <range start1="16" end1="18" start2="25" end2="47" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
-        <range start1="21" end1="22" start2="50" end2="54" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
-        <range start1="24" end1="25" start2="56" end2="72" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
-        <range start1="28" end1="28" start2="75" end2="86" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
-        <range start1="30" end1="32" start2="88" end2="100" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="11" end1="11" start2="16" end2="19" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="12" end1="12" start2="20" end2="24" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="15" end1="16" start2="27" end2="27" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="18" end1="18" start2="29" end2="31" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="26" end1="27" start2="39" end2="40" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="28" end1="32" start2="41" end2="43" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="35" end1="36" start2="46" end2="46" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="38" end1="40" start2="48" end2="51" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="44" end1="45" start2="55" end2="56" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="65" end1="66" start2="76" end2="76" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="68" end1="68" start2="78" end2="103" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="71" end1="74" start2="106" end2="109" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="75" end1="76" start2="110" end2="113" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
       </ranges>
     </file>
     <file path="$PROJECT_DIR$/src/CardGame.java">
       <ranges>
-        <range start1="0" end1="0" start2="0" end2="2" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
-        <range start1="1" end1="1" start2="3" end2="5" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
-        <range start1="3" end1="4" start2="7" end2="8" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
-        <range start1="5" end1="6" start2="9" end2="11" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
-        <range start1="7" end1="7" start2="12" end2="13" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
-        <range start1="11" end1="12" start2="17" end2="35" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
-        <range start1="13" end1="13" start2="36" end2="59" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
-        <range start1="14" end1="14" start2="60" end2="62" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/CardDeck.java">
-      <ranges>
-        <range start1="1" end1="1" start2="1" end2="4" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
-        <range start1="2" end1="3" start2="5" end2="7" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
-        <range start1="5" end1="5" start2="9" end2="10" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
-        <range start1="6" end1="7" start2="11" end2="12" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
-        <range start1="11" end1="13" start2="16" end2="28" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
-        <range start1="14" end1="14" start2="29" end2="30" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
-        <range start1="16" end1="17" start2="32" end2="35" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
-        <range start1="22" end1="22" start2="40" end2="62" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="0" end1="1" start2="0" end2="9" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="3" end1="3" start2="11" end2="13" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="5" end1="6" start2="15" end2="25" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="7" end1="7" start2="26" end2="27" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="11" end1="11" start2="31" end2="85" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
+        <range start1="12" end1="12" start2="86" end2="121" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="15" end1="15" start2="124" end2="126" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
       </ranges>
     </file>
   </component>
@@ -80,17 +90,33 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="CardGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CardGame" />
@@ -115,7 +141,8 @@
       <updated>1667829994869</updated>
       <workItem from="1667829998920" duration="2661000" />
       <workItem from="1667903945733" duration="2595000" />
-      <workItem from="1668000789870" duration="10441000" />
+      <workItem from="1668000789870" duration="10651000" />
+      <workItem from="1668086162451" duration="9261000" />
     </task>
     <task id="LOCAL-00001" summary="skeleton of files complete">
       <created>1667833587242</created>
@@ -131,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667906543347</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="all functions of Player.java, CardDeck.java, and Card.Java all work and players can 'take a turn' shuch that they can draw and discard a card to the right decks">
+      <created>1668012476287</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668012476287</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +185,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="skeleton of files complete" />
     <MESSAGE value="packClass can now import a packfile (*.txt)" />
-    <option name="LAST_COMMIT_MESSAGE" value="packClass can now import a packfile (*.txt)" />
+    <MESSAGE value="all functions of Player.java, CardDeck.java, and Card.Java all work and players can 'take a turn' shuch that they can draw and discard a card to the right decks" />
+    <option name="LAST_COMMIT_MESSAGE" value="all functions of Player.java, CardDeck.java, and Card.Java all work and players can 'take a turn' shuch that they can draw and discard a card to the right decks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
