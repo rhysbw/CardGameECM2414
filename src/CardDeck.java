@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class CardDeck extends Thread {
+public class CardDeck{
 
     private ArrayList<Card> cards;
     private final int deckNum;

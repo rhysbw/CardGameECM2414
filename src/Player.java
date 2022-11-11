@@ -11,7 +11,8 @@ public class Player extends Thread {
         this.hand = new ArrayList<>();
     }
 
-    public void drawCard(CardDeck deck) {
+    // this draws the top card from the deck related to the player and writes to the output file
+    private void drawCard(CardDeck deck) {
         Card elem = deck.getTopCard();
         System.out.println("Player " + this.playerNum + " draws card " + elem.getCardValue() + " from deck " + deck.getDeckNum());
         this.hand.add(elem);
@@ -19,9 +20,6 @@ public class Player extends Thread {
     }
 
     private void discardCard(CardDeck deck) {
-        // check prefered card
-        // random choose not preferd card
-
         int int_random = 0;
 
         for (;;) {
@@ -49,6 +47,7 @@ public class Player extends Thread {
 
     }
 
+    // has a turn - picks up and discards cards
     public void takeTurn(ArrayList<CardDeck> decks) {
         // discard random card to deck +1 - need to loop back on self
         // pick up new card from deck same num
@@ -62,6 +61,7 @@ public class Player extends Thread {
             discardCard(decks.get(this.playerNum));
         }
 
+        // draws a card from the correct deck
         drawCard(decks.get(this.playerNum - 1));
         checkWin();
 
@@ -73,7 +73,7 @@ public class Player extends Thread {
             if (playerFile.createNewFile()) {
                 System.out.println("File created: " + playerFile.getName());
             } else {
-                // delete all data
+                // if there already is a output file, deletes file to start from fresh
                 playerFile.delete();
                 makeOutputFile();
             }
@@ -83,6 +83,7 @@ public class Player extends Thread {
         }
     }
 
+    // writes to a new line in the file
     private void writeToOutputFile(String output) {
         try {
             BufferedWriter playerWriter = new BufferedWriter(new FileWriter("player" + this.playerNum + "_output.txt", true));

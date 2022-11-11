@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.io.File;  // Import the File class
 import java.io.FileNotFoundException;  // Import this class to handle errors
+import java.util.InputMismatchException;
 import java.util.Scanner; // Import the Scanner class to read text files
 
 public class Pack {
@@ -49,13 +50,13 @@ public class Pack {
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 try{
-                    if (Integer.parseInt(data) >= 0){
+                    if (Integer.parseInt(data) >= 0){ // checks value is a non-negative integer
                         packData.add(Integer.parseInt(data));
                     } else {
                         System.out.println("One or more cards have a non-positive value");
                         return false;
                     }
-                } catch (NumberFormatException e){
+                } catch (NumberFormatException e){ // checks row is an integer
                     System.out.println("One or more cards do not have a accepted value");
                     return false;
                 }
@@ -66,7 +67,7 @@ public class Pack {
             System.out.println("File not found");
             return false; // invalid file name need new pack file
         }
-        if (packData.size() == this.numberOfPlayers * 8){
+        if (packData.size() == this.numberOfPlayers * 8){ // checks pack file is of correct length
             return true;
         }
         System.out.println("Pack size invalid");
