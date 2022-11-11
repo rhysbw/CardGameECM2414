@@ -1,4 +1,9 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.BufferedWriter;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Player extends Thread {
     private final int preferredCard;
@@ -9,38 +14,46 @@ public class Player extends Thread {
         this.playerNum = playerNum;
         this.preferredCard = playerNum;
         this.hand = new ArrayList<>();
+        makeOutputFile();
+
+    }
+
+    public void addCardToHand(Card card) {
+        this.hand.add(card);
     }
 
     // this draws the top card from the deck related to the player and writes to the output file
     private void drawCard(CardDeck deck) {
         Card elem = deck.getTopCard();
-        System.out.println("Player " + this.playerNum + " draws card " + elem.getCardValue() + " from deck " + deck.getDeckNum());
         this.hand.add(elem);
         writeToOutputFile("Player " + this.playerNum + " draws card " + elem.getCardValue() + " from deck " + deck.getDeckNum());
+        writeToOutputFile("Player " + this.playerNum + " current hand:" + getHandAsString());
+
     }
 
     private void discardCard(CardDeck deck) {
         int int_random = 0;
+        // gets a random card from the hand, that isn't the preferred card value
+        for (; ; ) {
 
-        for (;;) {
-
-            System.out.println("Preferred Card: " + this.preferredCard);
-            int_random = new Random().nextInt(3);
-            System.out.println("random card: " + this.hand.get(int_random).getCardValue());
-            if ( this.hand.get(int_random).getCardValue() !=this.preferredCard) {
+            int_random = new Random().nextInt(0, 4);
+            if (this.hand.get(int_random).getCardValue() != this.preferredCard) {
                 break;
             }
         }
-
-
+        // puts the card into the bottom of the deck
         deck.putBottom(this.hand.get(int_random));
-        writeToOutputFile("Player " + this.playerNum + " discards card " + this.hand.get(int_random).getCardValue() + " to deck" + deck.getDeckNum());
-        System.out.println("Player " + this.playerNum + " discards card " + this.hand.get(int_random).getCardValue() + " to deck " + deck.getDeckNum());
+
+        writeToOutputFile("Player " + this.playerNum + " discards card " + this.hand.get(int_random).getCardValue()
+                + " to deck" + deck.getDeckNum());
+
+        // removes the card from the hand
         this.hand.remove(int_random);
 
     }
 
-    private boolean checkWin() {
+    // this checks if all the cards in the hand are of the same value
+    public boolean checkWin() {
         return this.hand.get(0).getCardValue() == this.hand.get(1).getCardValue() &&
                 this.hand.get(0).getCardValue() == this.hand.get(2).getCardValue() &&
                 this.hand.get(0).getCardValue() == this.hand.get(3).getCardValue();
@@ -49,24 +62,49 @@ public class Player extends Thread {
 
     // has a turn - picks up and discards cards
     public void takeTurn(ArrayList<CardDeck> decks) {
-        // discard random card to deck +1 - need to loop back on self
-        // pick up new card from deck same num
-        // check if winning
-        // [deck1, deck2, deck3, deck4]
-        System.out.println("Player " + this.playerNum + " is taking a turn");
+
+        // checks which deck a card should be discarded too
         if (playerNum == decks.size()) {
             discardCard(decks.get(0));
         } else {
-            System.out.println("Take turn else running");
             discardCard(decks.get(this.playerNum));
         }
 
         // draws a card from the correct deck
         drawCard(decks.get(this.playerNum - 1));
-        checkWin();
 
     }
 
+    // gets the current hand of a player as a string for outputting
+    private String getHandAsString() {
+        String currentHand = "";
+        for (Card c : hand) {
+            currentHand = currentHand + " " + c.getCardValue();
+        }
+        return currentHand;
+    }
+
+    // runs when a player has won
+    public void notified(int winningPlayerNumber) {
+
+        // if its this player that won, write: to output file
+        if (winningPlayerNumber == this.playerNum) {
+            writeToOutputFile("Player " + this.playerNum + " wins");
+            writeToOutputFile("Player " + this.playerNum + " exits");
+            writeToOutputFile("Player " + this.playerNum + " final hand:" + getHandAsString());
+            System.out.println("Player " + this.playerNum + " has won"); // prints to terminal window that the winning player has won
+        } else { // if a different player has won
+            writeToOutputFile("Player " + winningPlayerNumber + " has informed player " + this.playerNum + " that player "
+                    + winningPlayerNumber + " has won");
+            writeToOutputFile("Player " + this.playerNum + " exits");
+            writeToOutputFile("Player " + this.playerNum + " hand:" + getHandAsString());
+        }
+        // end the thread
+        this.interrupt();
+
+    }
+
+    // this makes an output file
     private void makeOutputFile() {
         try {
             File playerFile = new File("player" + this.playerNum + "_output.txt");

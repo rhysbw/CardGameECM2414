@@ -12,13 +12,13 @@ public class Pack {
         this.numberOfPlayers = numberOfPLayers;
         this.filename = filename;
         this.cards = new ArrayList<Card>();
-        importPack();
     }
 
-    private void importPack(){
+    // adds the contents of the packfile.txt to the pack as cards
+    public void importPack(){
 
         try{
-            File packFile = new File(filename);
+            File packFile = new File(this.filename);
             Scanner myReader = new Scanner(packFile);
             while (myReader.hasNextLine()){
                 String data = myReader.nextLine();
