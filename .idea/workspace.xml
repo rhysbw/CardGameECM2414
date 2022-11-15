@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0501ab6-d31b-4115-a6ea-31bd38120491" name="Changes" comment="Testing complete">
+    <list default="true" id="f0501ab6-d31b-4115-a6ea-31bd38120491" name="Changes" comment="All finished">
+      <change afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CardGameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardGameTest.java" afterDir="false" />
-    </list>
-    <list id="d2dae022-8230-459b-abd4-d84cdac59499" name="Changes by sammy" comment="Changes by sammy">
-      <change beforePath="$PROJECT_DIR$/src/CardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CardGameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardGameTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,26 +24,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/CardGameTest.java">
-      <ranges>
-        <range start1="4" end1="4" start2="4" end2="7" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
-        <range start1="7" end1="7" start2="10" end2="12" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
-        <range start1="10" end1="10" start2="15" end2="17" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
-        <range start1="14" end1="14" start2="21" end2="25" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
-        <range start1="16" end1="20" start2="27" end2="27" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
-        <range start1="22" end1="22" start2="29" end2="123" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/CardGame.java">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="1" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
-        <range start1="55" end1="63" start2="56" end2="57" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
-        <range start1="70" end1="71" start2="64" end2="64" changelist="d2dae022-8230-459b-abd4-d84cdac59499" />
-        <range start1="73" end1="73" start2="66" end2="76" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -68,6 +43,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TODO_SCOPE": "All Places",
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
@@ -157,7 +133,7 @@
       <workItem from="1668000789870" duration="10651000" />
       <workItem from="1668086162451" duration="9512000" />
       <workItem from="1668172354499" duration="15276000" />
-      <workItem from="1668524937114" duration="3296000" />
+      <workItem from="1668524937114" duration="5475000" />
     </task>
     <task id="LOCAL-00001" summary="skeleton of files complete">
       <created>1667833587242</created>
@@ -201,7 +177,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668181339551</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Working with all tests Complete">
+      <created>1668528401767</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668528401767</updated>
+    </task>
+    <task id="LOCAL-00008" summary="All finished">
+      <created>1668528416539</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668528416539</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +215,9 @@
     <MESSAGE value="Main program all works correctly with output files generated properly." />
     <MESSAGE value="Testing complete" />
     <MESSAGE value="Changes by sammy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by sammy" />
+    <MESSAGE value="Working with all tests Complete" />
+    <MESSAGE value="All finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="All finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
