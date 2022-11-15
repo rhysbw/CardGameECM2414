@@ -18,12 +18,14 @@ public class PackTest {
     private Pack correctPack;
     private String correctPackFile;
     private int numberOfPlayers;
+    private ArrayList<Card> cards;
+
     @Before
     public void setUp() throws Exception {
         try{
 
             numberOfPlayers = new Random().nextInt(0, 50);
-            ArrayList<Card> cards = new ArrayList<>();
+            cards = new ArrayList<>();
 
             BufferedWriter writer;
 
@@ -70,7 +72,10 @@ public class PackTest {
 
     @Test
     public void getCards() {
-
+        correctPack.importPack();
+        for (int i = 0 ; i < cards.size(); i++) {
+            assertEquals(this.correctPack.getCards().get(i).getCardValue(), cards.get(i).getCardValue());
+        }
     }
 
     @Test
@@ -104,10 +109,12 @@ public class PackTest {
 
     @Test
     public void getNumberOfPlayers() {
+        assertEquals(correctPack.getNumberOfPlayers(), numberOfPlayers);
     }
 
     @Test
     public void getFilename() {
+        assertEquals(correctPack.getFilename(), "correctPack.txt");
     }
 
     @Test
