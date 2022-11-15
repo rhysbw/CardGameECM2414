@@ -54,20 +54,23 @@ public class CardGame {
         // deal out the pack
 
         // deal to players
-        for (int i = 0; i < cardPack.getCards().size() / 2; i++) {
-            players.get(i % numberOfPlayers).addCardToHand(cardPack.getCards().get(i));
-        }
-        // deal to decks
-        for (int i = cardPack.getCards().size() / 2; i < cardPack.getCards().size(); i++) {
-            decks.get(i % numberOfPlayers).putBottom(cardPack.getCards().get(i));
-        }
-
+        deal(cardPack, players, decks, numberOfPlayers);
 
         // until a player has won, make players take a turn
         while (!checkIfPlayerHasWon(players, decks)) {
             for (Player p : players) {
                 p.takeTurn(decks);
             }
+        }
+    }
+
+    public static void deal(Pack cardPack, ArrayList<Player> players, ArrayList<CardDeck> decks, int numberOfPlayers) {
+        for (int i = 0; i < cardPack.getCards().size() / 2; i++) {
+            players.get(i % numberOfPlayers).addCardToHand(cardPack.getCards().get(i));
+        }
+        // deal to decks
+        for (int i = cardPack.getCards().size() / 2; i < cardPack.getCards().size(); i++) {
+            decks.get(i % numberOfPlayers).putBottom(cardPack.getCards().get(i));
         }
     }
 
