@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -68,7 +69,6 @@ public class CardGame {
                 p.takeTurn(decks);
             }
         }
-
     }
 
     // checks if any player has a winning hand
