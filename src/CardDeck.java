@@ -22,14 +22,14 @@ public class CardDeck{
         cards.add(card);
     }
 
-    // returns the first card in the queue
+    // returns the first card in the arraylist
     public Card getTopCard() {
         Card elem = cards.get(0);
         cards.remove(elem);
         return elem;
     }
 
-    // adds an item to the queue
+    // adds an item to the arraylist
     private Card getBottomCard() {
         Card elem = cards.get(cards.size() - 1);
         cards.remove(elem);

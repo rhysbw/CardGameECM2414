@@ -1,7 +1,7 @@
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
-// Runs all the tests for the program
+// Test suite that runs all the tests for the program
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses(

@@ -28,6 +28,7 @@ public class CardTest {
         }
     }
 
+    // checks the value is correct
     @Test
     public void getCardValue() {
         assertEquals(this.card.getCardValue(), 3);

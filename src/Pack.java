@@ -25,7 +25,7 @@ public class Pack {
                 cards.add(new Card(Integer.parseInt(data))); // makes a new card from int in packfile
             }
             myReader.close();
-        }catch (FileNotFoundException e){
+        }catch (FileNotFoundException e){ // this should not happen as the verify function ensures the packfile is valid
             System.out.println("File not found");
         }
 

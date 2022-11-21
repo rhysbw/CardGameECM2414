@@ -24,12 +24,12 @@ public class PackTest {
     public void setUp() throws Exception {
         try {
 
-            numberOfPlayers = new Random().nextInt(0, 50);
+            numberOfPlayers = new Random().nextInt(1, 50); // creates a random number of players
             cards = new ArrayList<>();
 
             BufferedWriter writer;
 
-            // Create a fle with random positive cards inside
+            // Create a file
             correctPackFile = "correctPack.txt";
             File correctFile = new File(correctPackFile);
             try {
@@ -37,13 +37,14 @@ public class PackTest {
             } catch (IOException e) {
                 throw new IOException(e);
             }
-
-            for (int i = 0; i < numberOfPlayers * 8; i++){
-                cards.add(new Card(new Random().nextInt(0,30)));
+            // adds a card to the arraylist of cards such that it has the right amount of cards for the amount of players
+            for (int i = 0; i < numberOfPlayers * 8; i++) {
+                cards.add(new Card(new Random().nextInt(0, 30)));
             }
 
             writer = new BufferedWriter(new FileWriter(this.correctPackFile, true));
-            for (Card c : cards){
+            // writes the cards values to the correctPack so that testing can be done with a valid pack.
+            for (Card c : cards) {
                 writer.write(c.getCardValue() + "");
                 writer.newLine();
             }
@@ -59,7 +60,7 @@ public class PackTest {
         try {
 
             File f = new File(correctPackFile);
-            f.delete();
+            f.delete(); // deletes the file
 
             correctPack = null;
             correctPackFile = null;
@@ -83,8 +84,7 @@ public class PackTest {
     public void importPack() {
         this.correctPack.importPack();
         ArrayList<Card> actualCards;
-        actualCards = this.correctPack.getCards();
-
+        actualCards = this.correctPack.getCards(); // gives a list of the cards when importing a pack
         ArrayList<Card> expectedCards = new ArrayList<>();
         File file = new File(this.correctPackFile);
         StringBuilder fileContents = new StringBuilder((int) file.length());
@@ -92,7 +92,7 @@ public class PackTest {
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()) {
                 String data = scanner.nextLine();
-                expectedCards.add(new Card(Integer.parseInt(data)));
+                expectedCards.add(new Card(Integer.parseInt(data))); // reads the card value from the file
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -113,8 +113,18 @@ public class PackTest {
     }
 
     @Test
+    public void getNumberOfPlayersFalse() {
+        assertNotEquals(correctPack.getNumberOfPlayers() + 1, numberOfPlayers);
+    }
+
+    @Test
     public void getFilename() {
         assertEquals(correctPack.getFilename(), "correctPack.txt");
+    }
+
+    @Test
+    public void getFilenameFalse() {
+        assertNotEquals(correctPack.getFilename(), "correctPack1.txt");
     }
 
     @Test

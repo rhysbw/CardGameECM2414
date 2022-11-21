@@ -27,10 +27,8 @@ public class CardGameTest {
 
     @Test
     public void checkIfPlayerHasWon() {
-        // make 2 player
-        // make 2 decks
 
-
+        // makes 2 players
         players.add(new Player(1));
         players.add(new Player(2));
 
@@ -50,19 +48,12 @@ public class CardGameTest {
     }
 
     @Test
-    public void deal() {
-
-         // All expected Values of Decks and Players
-
+    public void dealPlayers(){
+        // all expected values for players
         ArrayList<Player> expectedPlayers = new ArrayList<>();
         expectedPlayers.add(new Player(1));
         expectedPlayers.add(new Player(2));
         expectedPlayers.add(new Player(3));
-
-        ArrayList<CardDeck> expectedDecks = new ArrayList<>();
-        expectedDecks.add(new CardDeck(1));
-        expectedDecks.add(new CardDeck(2));
-        expectedDecks.add(new CardDeck(3));
 
         // Adding expected cards to players
         expectedPlayers.get(0).addCardToHand(new Card(1));
@@ -79,6 +70,35 @@ public class CardGameTest {
         expectedPlayers.get(2).addCardToHand(new Card(3));
         expectedPlayers.get(2).addCardToHand(new Card(9));
         expectedPlayers.get(2).addCardToHand(new Card(5));
+        //making a pack with a pre-determined testPack file with 3 players
+        Pack cardPack = new Pack("testPack.txt", 3);
+        this.players.add(new Player(1));
+        this.players.add(new Player(2));
+        this.players.add(new Player(3));
+
+        this.decks.add(new CardDeck(1));
+        this.decks.add(new CardDeck(2));
+        this.decks.add(new CardDeck(3));
+
+
+        CardGame.deal(cardPack, players, decks, 3);
+
+
+        // checking that the players are dealt the correct cards
+        for (int i = 0; i < players.size(); i++){
+            for (int j = 0; j < players.get(i).getHand().size(); j++){
+                assertEquals(players.get(i).getHand().get(j).getCardValue(),
+                        expectedPlayers.get(i).getHand().get(j).getCardValue());
+            }
+        }
+    }
+
+    @Test
+    public void dealDecks(){
+        ArrayList<CardDeck> expectedDecks = new ArrayList<>();
+        expectedDecks.add(new CardDeck(1));
+        expectedDecks.add(new CardDeck(2));
+        expectedDecks.add(new CardDeck(3));
 
         // Adding the expected cards to the decks
         expectedDecks.get(0).putBottom(new Card(7));
@@ -108,18 +128,13 @@ public class CardGameTest {
 
         CardGame.deal(cardPack, players, decks, 3);
 
-        for (int i = 0; i < players.size(); i++){
-            for (int j = 0; j < players.get(i).getHand().size(); j++){
-                assertEquals(players.get(i).getHand().get(j).getCardValue(),
-                            expectedPlayers.get(i).getHand().get(j).getCardValue());
-            }
-        }
+        // checking the decks have been dealt the correct cards
         for (int i = 0; i < decks.size(); i++){
             for (int j = 0; j < decks.get(i).getCards().size(); j++){
                 assertEquals(decks.get(i).getCards().get(j).getCardValue(),
                         expectedDecks.get(i).getCards().get(j).getCardValue());
             }
         }
-
     }
+
 }

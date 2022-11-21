@@ -47,6 +47,7 @@ public class PlayerTest {
     @After
     public void tearDown() throws Exception {
         try{
+            // removes the players and decks
             this.player = null;
             assertNull(this.player);
             this.decks = null;
@@ -99,6 +100,26 @@ public class PlayerTest {
     }
 
     @Test
+    public void notifiedPlayer2() throws IOException{
+        ArrayList<String> lines = new ArrayList<>();
+        Player player2 = new Player(2);
+
+
+        player2.notified(this.player.getPlayerNum());
+
+        BufferedReader input = new BufferedReader(new FileReader("player2_output.txt"));
+        String line = "";
+
+        // Adding the lines of the file to an ArrayList
+        while ((line = input.readLine()) != null) {
+            lines.add(line);
+        }
+        // Checking that the third from last line is what we expect
+        assertEquals(lines.get(lines.size() - 3), "Player 1 has informed player 2 that player 1 has won");
+    }
+
+
+    @Test
     public void notified() throws IOException {
         // call notified with as this player has won
         this.player.notified(this.player.getPlayerNum());
@@ -112,8 +133,6 @@ public class PlayerTest {
             last = line;
         }
         assertEquals(last, "Player 1 final hand:");
-
-
     }
 
     @Test
@@ -122,8 +141,18 @@ public class PlayerTest {
     }
 
     @Test
+    public void getPreferredCardFalse() {
+        assertNotEquals(this.player.getPreferredCard() + 1, 1);
+    }
+
+    @Test
     public void getPlayerNum() {
         assertEquals(this.player.getPlayerNum(), 1);
+    }
+
+    @Test
+    public void getPlayerNumFalse() {
+        assertNotEquals(this.player.getPlayerNum() + 1, 1);
     }
 
     @Test

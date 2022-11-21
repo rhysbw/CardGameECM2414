@@ -60,10 +60,12 @@ public class Player extends Thread {
 
     }
 
-    // has a turn - picks up and discards cards
-    public void takeTurn(ArrayList<CardDeck> decks) {
 
-        // checks which deck a card should be discarded too
+    // Synchronized for thread safety
+    // This function picks up and discards a card for the player
+    public synchronized void takeTurn(ArrayList<CardDeck> decks) {
+        // Checks which deck a card should be discarded to with
+        // overflow for the highest number player discarding to the lowest number deck
         if (playerNum == decks.size()) {
             discardCard(decks.get(0));
         } else {
