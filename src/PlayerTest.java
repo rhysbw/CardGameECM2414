@@ -105,7 +105,8 @@ public class PlayerTest {
 
         // check last line of file reads "Player 1 has won"
         BufferedReader input = new BufferedReader(new FileReader("player1_output.txt"));
-        String last = null, line = null;
+        String last = null;
+        String line = null;
 
         while ((line = input.readLine()) != null) {
             last = line;

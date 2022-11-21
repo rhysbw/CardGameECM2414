@@ -48,6 +48,8 @@ public class CardDeckTest {
     public void putBottom() {
         this.deck.putBottom(new Card(100));
         assertEquals(this.deck.getCards().get(this.deck.getDeckSize() - 1).getCardValue(), 100);
+
+        // checks if the deck has been updated by looking at the deck size
         assertEquals(this.deck.getDeckSize(), 5);
 
     }

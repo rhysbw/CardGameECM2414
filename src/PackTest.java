@@ -22,7 +22,7 @@ public class PackTest {
 
     @Before
     public void setUp() throws Exception {
-        try{
+        try {
 
             numberOfPlayers = new Random().nextInt(0, 50);
             cards = new ArrayList<>();
@@ -32,9 +32,9 @@ public class PackTest {
             // Create a fle with random positive cards inside
             correctPackFile = "correctPack.txt";
             File correctFile = new File(correctPackFile);
-            try{
+            try {
                 correctFile.createNewFile();
-            } catch (IOException e){
+            } catch (IOException e) {
                 throw new IOException(e);
             }
 
@@ -49,7 +49,7 @@ public class PackTest {
             }
             writer.close();
             this.correctPack = new Pack(this.correctPackFile, numberOfPlayers);
-        } catch (Exception e){
+        } catch (Exception e) {
             throw new Exception(e);
         }
     }
@@ -65,7 +65,7 @@ public class PackTest {
             correctPackFile = null;
             assertNull(correctPackFile);
             assertNull(correctPack);
-        } catch (Exception e){
+        } catch (Exception e) {
             throw new Exception(e);
         }
     }
@@ -73,7 +73,8 @@ public class PackTest {
     @Test
     public void getCards() {
         correctPack.importPack();
-        for (int i = 0 ; i < cards.size(); i++) {
+        // checks that the getCard function returns the cards in the correct order, which is tested by checking that they match the cards in the arraylist
+        for (int i = 0; i < cards.size(); i++) {
             assertEquals(this.correctPack.getCards().get(i).getCardValue(), cards.get(i).getCardValue());
         }
     }
@@ -86,25 +87,24 @@ public class PackTest {
 
         ArrayList<Card> expectedCards = new ArrayList<>();
         File file = new File(this.correctPackFile);
-        StringBuilder fileContents = new StringBuilder((int)file.length());
+        StringBuilder fileContents = new StringBuilder((int) file.length());
 
         try (Scanner scanner = new Scanner(file)) {
-            while(scanner.hasNextLine()) {
+            while (scanner.hasNextLine()) {
                 String data = scanner.nextLine();
                 expectedCards.add(new Card(Integer.parseInt(data)));
             }
-        } catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
         for (int i = 0; i < actualCards.size(); i++) {
             try {
-                assertEquals(actualCards.get(i).getCardValue(), expectedCards.get(i).getCardValue());
-            } catch (Exception e){
+                assertEquals(actualCards.get(i).getCardValue(), expectedCards.get(i).getCardValue()); // compares that the card values are the same in both
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
     }
-
 
 
     @Test
@@ -119,40 +119,50 @@ public class PackTest {
 
     @Test
     public void verified() throws IOException {
-        // check we
-
+        // check that a valid pack file is verified as true
         assertTrue(correctPack.verified());
+    }
 
-
+    @Test
+    public void negativeVerified() throws IOException {
         Pack negativePack;
-        Pack wrongLinePack;
-
         File negativeFile = new File("negativeFile.txt");
-        File wrongLineFile = new File("wrongLineFile.txt");
         try {
             negativeFile.createNewFile();
+        } catch (IOException e) {
+            throw new IOException(e);
+        }
+        BufferedWriter negWriter = new BufferedWriter(new FileWriter(negativeFile.getName(), true));
+        negWriter.write("-1"); // writes a non-positive integer to the file
+        for (int i = 0; i < (numberOfPlayers * 8) - 1; i++) {
+            negWriter.write(new Random().nextInt(0, 50));
+            negWriter.newLine();
+        }
+        negWriter.close();
+        negativePack = new Pack(negativeFile.getName(), numberOfPlayers);
+        assertFalse(negativePack.verified()); // checks that the pack file is seen as invalid
+
+    }
+
+    @Test
+    public void wrongNumberVerified() throws IOException {
+        Pack wrongLinePack;
+
+        File wrongLineFile = new File("wrongLineFile.txt");
+        try {
             wrongLineFile.createNewFile();
         } catch (IOException e) {
             throw new IOException(e);
         }
-
-        BufferedWriter negWriter = new BufferedWriter( new FileWriter(negativeFile.getName(), true));
-        BufferedWriter wrongWriter = new BufferedWriter( new FileWriter(wrongLineFile.getName(), true));
-
-        negWriter.write("-1");
-        for (int i = 0; i < (numberOfPlayers * 8) - 1; i++){
-            negWriter.write(new Random().nextInt(0,50));
-            negWriter.newLine();
-        }
+        // makes a packfile of the incorrect length
+        BufferedWriter wrongWriter = new BufferedWriter(new FileWriter(wrongLineFile.getName(), true));
         wrongWriter.write("5");
-
-        negWriter.close();
         wrongWriter.close();
-
-        negativePack = new Pack(negativeFile.getName(), numberOfPlayers);
         wrongLinePack = new Pack(wrongLineFile.getName(), numberOfPlayers);
+        assertFalse(wrongLinePack.verified()); // checks that the pack file is seen as invalid
 
-        assertFalse(negativePack.verified());
-        assertFalse(wrongLinePack.verified());
+
     }
+
+
 }

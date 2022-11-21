@@ -71,6 +71,7 @@ public class Player extends Thread {
         }
 
         // draws a card from the correct deck
+        // No need to check for an invalid decks input
         drawCard(decks.get(this.playerNum - 1));
 
     }

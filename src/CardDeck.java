@@ -8,7 +8,6 @@ public class CardDeck{
 
     private ArrayList<Card> cards;
     private final int deckNum;
-    private final int limit = 4;
 
     CardDeck(int deckNum) {
         this.deckNum = deckNum;

@@ -4,9 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0501ab6-d31b-4115-a6ea-31bd38120491" name="Changes" comment="All finished">
-      <change afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+    <list default="true" id="f0501ab6-d31b-4115-a6ea-31bd38120491" name="Changes" comment="readme file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CardDeck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardDeck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CardDeckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardDeckTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PackTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayerTest.java" afterDir="false" />
+    </list>
+    <list id="7e274782-126e-4fcb-ab13-1f60fbf52783" name="Changes by sammy" comment="added missing tests">
+      <change beforePath="$PROJECT_DIR$/src/CardDeck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardDeck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CardDeckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardDeckTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CardGameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardGameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CardGameTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardGameTestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PackTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +42,93 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/PlayerTest.java">
+      <ranges>
+        <range start1="49" end1="49" start2="49" end2="50" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="100" end1="100" start2="101" end2="121" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="107" end1="108" start2="128" end2="130" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="113" end1="115" start2="135" end2="135" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="121" end1="121" start2="141" end2="146" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="126" end1="126" start2="151" end2="156" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/CardTest.java">
+      <ranges>
+        <range start1="30" end1="30" start2="30" end2="31" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="33" end1="34" start2="34" end2="38" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/CardDeck.java">
+      <ranges>
+        <range start1="10" end1="11" start2="10" end2="10" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="25" end1="26" start2="24" end2="25" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="32" end1="33" start2="31" end2="32" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/PackTest.java">
+      <ranges>
+        <range start1="24" end1="25" start2="24" end2="25" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="26" end1="27" start2="26" end2="27" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="31" end1="32" start2="31" end2="32" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="34" end1="35" start2="34" end2="35" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="36" end1="37" start2="36" end2="37" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="39" end1="42" start2="39" end2="42" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="45" end1="46" start2="45" end2="47" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="51" end1="52" start2="52" end2="53" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="61" end1="62" start2="62" end2="63" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="67" end1="68" start2="68" end2="69" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="75" end1="76" start2="76" end2="78" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="84" end1="86" start2="86" end2="87" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="88" end1="89" start2="89" end2="90" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="91" end1="92" start2="92" end2="93" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="93" end1="94" start2="94" end2="95" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="95" end1="96" start2="96" end2="97" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="100" end1="102" start2="101" end2="103" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="108" end1="109" start2="109" end2="109" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="113" end1="113" start2="113" end2="118" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="118" end1="118" start2="123" end2="128" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="121" end1="123" start2="131" end2="132" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="124" end1="124" start2="133" end2="134" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="125" end1="126" start2="135" end2="137" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="127" end1="129" start2="138" end2="138" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="130" end1="131" start2="139" end2="139" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="133" end1="133" start2="141" end2="162" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="137" end1="146" start2="166" end2="168" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="147" end1="149" start2="169" end2="169" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="150" end1="152" start2="170" end2="170" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="153" end1="153" start2="171" end2="172" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="154" end1="156" start2="173" end2="174" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="157" end1="157" start2="175" end2="177" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/CardDeckTest.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="3" end1="3" start2="4" end2="5" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="22" end1="22" start2="24" end2="25" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="34" end1="34" start2="37" end2="38" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="36" end1="37" start2="40" end2="41" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="45" end1="45" start2="49" end2="54" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="49" end1="49" start2="58" end2="60" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="50" end1="50" start2="61" end2="63" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+        <range start1="51" end1="52" start2="64" end2="64" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="65" end1="66" start2="77" end2="78" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="74" end1="74" start2="86" end2="91" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="76" end1="77" start2="93" end2="94" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="82" end1="83" start2="99" end2="100" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="85" end1="87" start2="102" end2="104" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="88" end1="89" start2="105" end2="106" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Player.java">
+      <ranges>
+        <range start1="62" end1="64" start2="62" end2="62" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="65" end1="66" start2="63" end2="68" changelist="7e274782-126e-4fcb-ab13-1f60fbf52783" />
+        <range start1="73" end1="73" start2="75" end2="76" changelist="f0501ab6-d31b-4115-a6ea-31bd38120491" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -34,29 +138,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TODO_SCOPE": "All Places",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "create.test.in.the.same.root": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -65,7 +169,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CardGameTestSuite">
+  <component name="RunManager" selected="JUnit.PlayerTest.notifiedPlayer2">
     <configuration name="CardGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CardGame" />
       <module name="CardGame" />
@@ -73,38 +177,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardGameTestSuite (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CardGameTestSuite" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardGameTestSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardDeckTest.getDeckNumFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CardGame" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CardGameTestSuite" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardGameTest.checkIfPlayerHasWon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CardGame" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CardGameTest" />
-      <option name="METHOD_NAME" value="checkIfPlayerHasWon" />
+      <option name="MAIN_CLASS_NAME" value="CardDeckTest" />
+      <option name="METHOD_NAME" value="getDeckNumFalse" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardGameTest.deal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PackTest.getNumberOfPlayersFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CardGame" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CardGameTest" />
-      <option name="METHOD_NAME" value="deal" />
+      <option name="MAIN_CLASS_NAME" value="PackTest" />
+      <option name="METHOD_NAME" value="getNumberOfPlayersFalse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerTest.notified" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CardGame" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlayerTest" />
+      <option name="METHOD_NAME" value="notified" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerTest.notifiedPlayer2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CardGame" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlayerTest" />
+      <option name="METHOD_NAME" value="notifiedPlayer2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -112,11 +219,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CardGameTestSuite" />
-        <item itemvalue="JUnit.CardGameTestSuite (1)" />
-        <item itemvalue="JUnit.CardGameTest.deal" />
-        <item itemvalue="JUnit.CardGameTest.checkIfPlayerHasWon" />
+        <item itemvalue="JUnit.PlayerTest.notifiedPlayer2" />
         <item itemvalue="Application.CardGame" />
+        <item itemvalue="JUnit.CardDeckTest.getDeckNumFalse" />
+        <item itemvalue="JUnit.PlayerTest.notified" />
+        <item itemvalue="JUnit.PackTest.getNumberOfPlayersFalse" />
       </list>
     </recent_temporary>
   </component>
@@ -133,7 +240,8 @@
       <workItem from="1668000789870" duration="10651000" />
       <workItem from="1668086162451" duration="9512000" />
       <workItem from="1668172354499" duration="15276000" />
-      <workItem from="1668524937114" duration="5475000" />
+      <workItem from="1668524937114" duration="7172000" />
+      <workItem from="1668951012080" duration="8705000" />
     </task>
     <task id="LOCAL-00001" summary="skeleton of files complete">
       <created>1667833587242</created>
@@ -191,7 +299,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668528416539</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="readme file">
+      <created>1668532365470</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1668532365470</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added missing tests">
+      <created>1668533775802</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1668533775802</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +339,9 @@
     <MESSAGE value="Changes by sammy" />
     <MESSAGE value="Working with all tests Complete" />
     <MESSAGE value="All finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="All finished" />
+    <MESSAGE value="readme file" />
+    <MESSAGE value="added missing tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added missing tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
