@@ -80,6 +80,8 @@ public class PackTest {
         }
     }
 
+    // Checks if the cards were imported properly from the file
+    // by comparing the cards inside the file to the packs cards
     @Test
     public void importPack() {
         this.correctPack.importPack();
@@ -87,7 +89,6 @@ public class PackTest {
         actualCards = this.correctPack.getCards(); // gives a list of the cards when importing a pack
         ArrayList<Card> expectedCards = new ArrayList<>();
         File file = new File(this.correctPackFile);
-        StringBuilder fileContents = new StringBuilder((int) file.length());
 
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()) {

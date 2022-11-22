@@ -9,6 +9,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import java.util.Scanner;
 
 public class PlayerTest {
 
@@ -162,5 +163,56 @@ public class PlayerTest {
     @Test
     public void getHand() {
         assertEquals(this.player.getHand(), new ArrayList<Card>());
+    }
+
+    // Adds cards to the players hand equal to the cards ArrayList
+    @Test
+    public void getFullHand(){
+        this.player.addCardToHand(new Card(1));
+        this.player.addCardToHand(new Card(2));
+        this.player.addCardToHand(new Card(3));
+        this.player.addCardToHand(new Card(4));
+
+        for (int i = 0; i < cards.size(); i++){
+            assertEquals(this.player.getHand().get(i).getCardValue(), cards.get(i).getCardValue());
+        }
+
+    }
+
+    @Test
+    public void makeOutputFile(){
+        // make a new output file
+        this.player.makeOutputFile();
+        File f = new File("player1_output.txt");
+        // check file exists
+        assertTrue(f.exists());
+        f.delete();
+
+    }
+
+    @Test
+    public void writeToOutputFile(){
+        // make output file
+        this.player.makeOutputFile();
+        // write "test string 123" to file
+        this.player.writeToOutputFile("test string 123");
+        // read last line from file
+        File file = new File("player1_output.txt");
+        StringBuilder fileContents = new StringBuilder((int) file.length());
+
+        try (Scanner scanner = new Scanner(file)) {
+            while (scanner.hasNextLine()) {
+                fileContents.append(scanner.nextLine()); // gets what is written in file
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String writtenContents = fileContents.toString();
+        // assertEquals
+        assertEquals(fileContents.toString(), "test string 123");
+
+
+
     }
 }

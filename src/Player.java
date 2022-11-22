@@ -108,7 +108,7 @@ public class Player extends Thread {
     }
 
     // this makes an output file
-    private void makeOutputFile() {
+    public void makeOutputFile() {
         try {
             File playerFile = new File("player" + this.playerNum + "_output.txt");
             if (playerFile.createNewFile()) {
@@ -125,7 +125,7 @@ public class Player extends Thread {
     }
 
     // writes to a new line in the file
-    private void writeToOutputFile(String output) {
+    public void writeToOutputFile(String output) {
         try {
             BufferedWriter playerWriter = new BufferedWriter(new FileWriter("player" + this.playerNum + "_output.txt", true));
             playerWriter.write(output);
