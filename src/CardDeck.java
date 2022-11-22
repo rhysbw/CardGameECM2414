@@ -41,7 +41,7 @@ public class CardDeck{
     }
 
     // makes a file to write the final deck output too
-    private void makeFile() {
+    public void makeFile() {
         try {
             File deckFile = new File("deck" + this.deckNum + "_output.txt");
             try {

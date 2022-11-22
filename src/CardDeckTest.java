@@ -69,9 +69,14 @@ public class CardDeckTest {
         // check top card is correct value
         assertEquals(this.deck.getTopCard().getCardValue(), 2);
         assertEquals(this.deck.getDeckSize(), 3);
+    }
 
+    @Test
+    public void getTopCardMultiple(){
         // checks cards that have been added are in correct order
+
         ArrayList<Card> expectedCardValues = new ArrayList<>();
+        expectedCardValues.add(new Card(2));
         expectedCardValues.add(new Card(3));
         expectedCardValues.add(new Card(5));
         expectedCardValues.add(new Card(7));
@@ -90,6 +95,15 @@ public class CardDeckTest {
         assertNotEquals(this.deck.getDeckNum() + 1, 1);
     }
 
+    @Test
+    public void makeFile(){
+        this.deck.makeFile();
+        File f = new File("deck1_output.txt");
+        // check if exists
+        assertTrue(f.exists());
+        f.delete();
+
+    }
     @Test
     public void writeContentsToFile() {
         this.deck.writeContentsToFile();

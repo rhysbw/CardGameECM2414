@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.After;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -50,8 +51,12 @@ public class PlayerTest {
             // removes the players and decks
             this.player = null;
             assertNull(this.player);
+
             this.decks = null;
             assertNull(this.decks);
+
+            this.cards = null;
+            assertNull(this.cards);
         }catch (Exception e){
             throw new Exception(e);
         }
@@ -103,7 +108,6 @@ public class PlayerTest {
     public void notifiedPlayer2() throws IOException{
         ArrayList<String> lines = new ArrayList<>();
         Player player2 = new Player(2);
-
 
         player2.notified(this.player.getPlayerNum());
 
